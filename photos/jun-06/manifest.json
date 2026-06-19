@@ -1,0 +1,660 @@
+﻿[
+    {
+        "Num":  1,
+        "Original":  "jun-06-001.jpg",
+        "File":  "jun-06-001.jpg",
+        "Taken":  "2026-06-05 10:08:24",
+        "Type":  "image"
+    },
+    {
+        "Num":  2,
+        "Original":  "jun-06-002.jpg",
+        "File":  "jun-06-002.jpg",
+        "Taken":  "2026-06-05 10:08:24",
+        "Type":  "image"
+    },
+    {
+        "Num":  3,
+        "Original":  "jun-06-005.jpg",
+        "File":  "jun-06-003.jpg",
+        "Taken":  "2026-06-05 10:08:25",
+        "Type":  "image"
+    },
+    {
+        "Num":  4,
+        "Original":  "jun-06-006.jpg",
+        "File":  "jun-06-004.jpg",
+        "Taken":  "2026-06-05 14:34:07",
+        "Type":  "image"
+    },
+    {
+        "Num":  5,
+        "Original":  "jun-06-007.jpg",
+        "File":  "jun-06-005.jpg",
+        "Taken":  "2026-06-06 16:42:00",
+        "Type":  "image"
+    },
+    {
+        "Num":  6,
+        "Original":  "jun-06-008.jpg",
+        "File":  "jun-06-006.jpg",
+        "Taken":  "2026-06-06 16:42:06",
+        "Type":  "image"
+    },
+    {
+        "Num":  7,
+        "Original":  "jun-06-009.jpg",
+        "File":  "jun-06-007.jpg",
+        "Taken":  "2026-06-06 16:54:14",
+        "Type":  "image"
+    },
+    {
+        "Num":  8,
+        "Original":  "jun-06-010.jpg",
+        "File":  "jun-06-008.jpg",
+        "Taken":  "2026-06-06 16:54:23",
+        "Type":  "image"
+    },
+    {
+        "Num":  9,
+        "Original":  "jun-06-011.jpg",
+        "File":  "jun-06-009.jpg",
+        "Taken":  "2026-06-06 16:57:00",
+        "Type":  "image"
+    },
+    {
+        "Num":  10,
+        "Original":  "jun-06-012.jpg",
+        "File":  "jun-06-010.jpg",
+        "Taken":  "2026-06-06 16:57:04",
+        "Type":  "image"
+    },
+    {
+        "Num":  11,
+        "Original":  "jun-06-013.jpg",
+        "File":  "jun-06-011.jpg",
+        "Taken":  "2026-06-06 16:57:06",
+        "Type":  "image"
+    },
+    {
+        "Num":  12,
+        "Original":  "jun-06-014.jpg",
+        "File":  "jun-06-012.jpg",
+        "Taken":  "2026-06-06 16:58:56",
+        "Type":  "image"
+    },
+    {
+        "Num":  13,
+        "Original":  "jun-06-015.jpg",
+        "File":  "jun-06-013.jpg",
+        "Taken":  "2026-06-06 16:58:56",
+        "Type":  "image"
+    },
+    {
+        "Num":  14,
+        "Original":  "jun-06-016.jpg",
+        "File":  "jun-06-014.jpg",
+        "Taken":  "2026-06-06 16:58:59",
+        "Type":  "image"
+    },
+    {
+        "Num":  15,
+        "Original":  "jun-06-017.jpg",
+        "File":  "jun-06-015.jpg",
+        "Taken":  "2026-06-06 16:59:17",
+        "Type":  "image"
+    },
+    {
+        "Num":  16,
+        "Original":  "jun-06-018.jpg",
+        "File":  "jun-06-016.jpg",
+        "Taken":  "2026-06-06 17:00:19",
+        "Type":  "image"
+    },
+    {
+        "Num":  17,
+        "Original":  "jun-06-019.jpg",
+        "File":  "jun-06-017.jpg",
+        "Taken":  "2026-06-06 17:00:21",
+        "Type":  "image"
+    },
+    {
+        "Num":  18,
+        "Original":  "jun-06-020.jpg",
+        "File":  "jun-06-018.jpg",
+        "Taken":  "2026-06-06 17:02:14",
+        "Type":  "image"
+    },
+    {
+        "Num":  19,
+        "Original":  "jun-06-021.jpg",
+        "File":  "jun-06-019.jpg",
+        "Taken":  "2026-06-06 17:25:34",
+        "Type":  "image"
+    },
+    {
+        "Num":  20,
+        "Original":  "jun-06-022.jpg",
+        "File":  "jun-06-020.jpg",
+        "Taken":  "2026-06-06 17:25:34",
+        "Type":  "image"
+    },
+    {
+        "Num":  21,
+        "Original":  "jun-06-023.jpg",
+        "File":  "jun-06-021.jpg",
+        "Taken":  "2026-06-06 17:25:58",
+        "Type":  "image"
+    },
+    {
+        "Num":  22,
+        "Original":  "jun-06-024.jpg",
+        "File":  "jun-06-022.jpg",
+        "Taken":  "2026-06-06 17:25:59",
+        "Type":  "image"
+    },
+    {
+        "Num":  23,
+        "Original":  "jun-06-025.jpg",
+        "File":  "jun-06-023.jpg",
+        "Taken":  "2026-06-06 17:26:00",
+        "Type":  "image"
+    },
+    {
+        "Num":  24,
+        "Original":  "jun-06-026.jpg",
+        "File":  "jun-06-024.jpg",
+        "Taken":  "2026-06-06 17:26:01",
+        "Type":  "image"
+    },
+    {
+        "Num":  25,
+        "Original":  "jun-06-027.jpg",
+        "File":  "jun-06-025.jpg",
+        "Taken":  "2026-06-06 17:26:06",
+        "Type":  "image"
+    },
+    {
+        "Num":  26,
+        "Original":  "jun-06-028.jpg",
+        "File":  "jun-06-026.jpg",
+        "Taken":  "2026-06-06 17:26:07",
+        "Type":  "image"
+    },
+    {
+        "Num":  27,
+        "Original":  "jun-06-029.jpg",
+        "File":  "jun-06-027.jpg",
+        "Taken":  "2026-06-06 17:26:08",
+        "Type":  "image"
+    },
+    {
+        "Num":  28,
+        "Original":  "jun-06-030.jpg",
+        "File":  "jun-06-028.jpg",
+        "Taken":  "2026-06-06 17:26:09",
+        "Type":  "image"
+    },
+    {
+        "Num":  29,
+        "Original":  "jun-06-031.jpg",
+        "File":  "jun-06-029.jpg",
+        "Taken":  "2026-06-06 17:26:10",
+        "Type":  "image"
+    },
+    {
+        "Num":  30,
+        "Original":  "jun-06-032.jpg",
+        "File":  "jun-06-030.jpg",
+        "Taken":  "2026-06-06 17:26:11",
+        "Type":  "image"
+    },
+    {
+        "Num":  31,
+        "Original":  "jun-06-033.jpg",
+        "File":  "jun-06-031.jpg",
+        "Taken":  "2026-06-06 17:27:32",
+        "Type":  "image"
+    },
+    {
+        "Num":  32,
+        "Original":  "jun-06-034.jpg",
+        "File":  "jun-06-032.jpg",
+        "Taken":  "2026-06-06 17:28:59",
+        "Type":  "image"
+    },
+    {
+        "Num":  33,
+        "Original":  "jun-06-035.jpg",
+        "File":  "jun-06-033.jpg",
+        "Taken":  "2026-06-06 17:29:07",
+        "Type":  "image"
+    },
+    {
+        "Num":  34,
+        "Original":  "IMG_1858.mp4",
+        "File":  "jun-06-034.mp4",
+        "Taken":  "2026-06-06 17:33:03",
+        "Type":  "video"
+    },
+    {
+        "Num":  35,
+        "Original":  "jun-06-036.jpg",
+        "File":  "jun-06-035.jpg",
+        "Taken":  "2026-06-06 17:40:55",
+        "Type":  "image"
+    },
+    {
+        "Num":  36,
+        "Original":  "jun-06-037.jpg",
+        "File":  "jun-06-036.jpg",
+        "Taken":  "2026-06-06 17:40:58",
+        "Type":  "image"
+    },
+    {
+        "Num":  37,
+        "Original":  "jun-06-038.jpg",
+        "File":  "jun-06-037.jpg",
+        "Taken":  "2026-06-06 17:44:33",
+        "Type":  "image"
+    },
+    {
+        "Num":  38,
+        "Original":  "jun-06-039.jpg",
+        "File":  "jun-06-038.jpg",
+        "Taken":  "2026-06-06 17:47:25",
+        "Type":  "image"
+    },
+    {
+        "Num":  39,
+        "Original":  "IMG_1864.mp4",
+        "File":  "jun-06-039.mp4",
+        "Taken":  "2026-06-06 17:57:57",
+        "Type":  "video"
+    },
+    {
+        "Num":  40,
+        "Original":  "jun-06-040.jpg",
+        "File":  "jun-06-040.jpg",
+        "Taken":  "2026-06-06 18:08:29",
+        "Type":  "image"
+    },
+    {
+        "Num":  41,
+        "Original":  "jun-06-041.jpg",
+        "File":  "jun-06-041.jpg",
+        "Taken":  "2026-06-06 18:12:29",
+        "Type":  "image"
+    },
+    {
+        "Num":  42,
+        "Original":  "jun-06-042.jpg",
+        "File":  "jun-06-042.jpg",
+        "Taken":  "2026-06-06 18:24:59",
+        "Type":  "image"
+    },
+    {
+        "Num":  43,
+        "Original":  "jun-06-043.jpg",
+        "File":  "jun-06-043.jpg",
+        "Taken":  "2026-06-06 19:22:55",
+        "Type":  "image"
+    },
+    {
+        "Num":  44,
+        "Original":  "jun-06-044.jpg",
+        "File":  "jun-06-044.jpg",
+        "Taken":  "2026-06-06 19:22:55",
+        "Type":  "image"
+    },
+    {
+        "Num":  45,
+        "Original":  "jun-06-045.jpg",
+        "File":  "jun-06-045.jpg",
+        "Taken":  "2026-06-06 19:24:07",
+        "Type":  "image"
+    },
+    {
+        "Num":  46,
+        "Original":  "jun-06-046.jpg",
+        "File":  "jun-06-046.jpg",
+        "Taken":  "2026-06-06 19:26:27",
+        "Type":  "image"
+    },
+    {
+        "Num":  47,
+        "Original":  "jun-06-047.jpg",
+        "File":  "jun-06-047.jpg",
+        "Taken":  "2026-06-06 19:27:24",
+        "Type":  "image"
+    },
+    {
+        "Num":  48,
+        "Original":  "jun-06-048.jpg",
+        "File":  "jun-06-048.jpg",
+        "Taken":  "2026-06-06 19:27:37",
+        "Type":  "image"
+    },
+    {
+        "Num":  49,
+        "Original":  "jun-06-049.jpg",
+        "File":  "jun-06-049.jpg",
+        "Taken":  "2026-06-06 19:30:35",
+        "Type":  "image"
+    },
+    {
+        "Num":  50,
+        "Original":  "jun-06-050.jpg",
+        "File":  "jun-06-050.jpg",
+        "Taken":  "2026-06-06 19:30:42",
+        "Type":  "image"
+    },
+    {
+        "Num":  51,
+        "Original":  "jun-06-051.jpg",
+        "File":  "jun-06-051.jpg",
+        "Taken":  "2026-06-06 19:30:46",
+        "Type":  "image"
+    },
+    {
+        "Num":  52,
+        "Original":  "jun-06-052.jpg",
+        "File":  "jun-06-052.jpg",
+        "Taken":  "2026-06-06 19:30:56",
+        "Type":  "image"
+    },
+    {
+        "Num":  53,
+        "Original":  "jun-06-053.jpg",
+        "File":  "jun-06-053.jpg",
+        "Taken":  "2026-06-06 19:31:04",
+        "Type":  "image"
+    },
+    {
+        "Num":  54,
+        "Original":  "jun-06-054.jpg",
+        "File":  "jun-06-054.jpg",
+        "Taken":  "2026-06-06 19:31:06",
+        "Type":  "image"
+    },
+    {
+        "Num":  55,
+        "Original":  "jun-06-055.jpg",
+        "File":  "jun-06-055.jpg",
+        "Taken":  "2026-06-06 19:31:07",
+        "Type":  "image"
+    },
+    {
+        "Num":  56,
+        "Original":  "jun-06-056.jpg",
+        "File":  "jun-06-056.jpg",
+        "Taken":  "2026-06-06 19:32:46",
+        "Type":  "image"
+    },
+    {
+        "Num":  57,
+        "Original":  "jun-06-057.jpg",
+        "File":  "jun-06-057.jpg",
+        "Taken":  "2026-06-06 19:40:30",
+        "Type":  "image"
+    },
+    {
+        "Num":  58,
+        "Original":  "jun-06-058.jpg",
+        "File":  "jun-06-058.jpg",
+        "Taken":  "2026-06-06 20:05:34",
+        "Type":  "image"
+    },
+    {
+        "Num":  59,
+        "Original":  "jun-06-059.jpg",
+        "File":  "jun-06-059.jpg",
+        "Taken":  "2026-06-06 20:54:15",
+        "Type":  "image"
+    },
+    {
+        "Num":  60,
+        "Original":  "jun-06-060.jpg",
+        "File":  "jun-06-060.jpg",
+        "Taken":  "2026-06-06 20:55:35",
+        "Type":  "image"
+    },
+    {
+        "Num":  61,
+        "Original":  "jun-06-061.jpg",
+        "File":  "jun-06-061.jpg",
+        "Taken":  "2026-06-06 20:55:37",
+        "Type":  "image"
+    },
+    {
+        "Num":  62,
+        "Original":  "jun-06-062.jpg",
+        "File":  "jun-06-062.jpg",
+        "Taken":  "2026-06-06 21:01:25",
+        "Type":  "image"
+    },
+    {
+        "Num":  63,
+        "Original":  "jun-06-063.jpg",
+        "File":  "jun-06-063.jpg",
+        "Taken":  "2026-06-06 21:01:25",
+        "Type":  "image"
+    },
+    {
+        "Num":  64,
+        "Original":  "jun-06-064.jpg",
+        "File":  "jun-06-064.jpg",
+        "Taken":  "2026-06-06 21:13:33",
+        "Type":  "image"
+    },
+    {
+        "Num":  65,
+        "Original":  "jun-06-065.jpg",
+        "File":  "jun-06-065.jpg",
+        "Taken":  "2026-06-06 21:45:37",
+        "Type":  "image"
+    },
+    {
+        "Num":  66,
+        "Original":  "jun-06-066.jpg",
+        "File":  "jun-06-066.jpg",
+        "Taken":  "2026-06-06 21:45:37",
+        "Type":  "image"
+    },
+    {
+        "Num":  67,
+        "Original":  "jun-06-067.jpg",
+        "File":  "jun-06-067.jpg",
+        "Taken":  "2026-06-06 21:45:39",
+        "Type":  "image"
+    },
+    {
+        "Num":  68,
+        "Original":  "jun-06-068.jpg",
+        "File":  "jun-06-068.jpg",
+        "Taken":  "2026-06-06 21:45:48",
+        "Type":  "image"
+    },
+    {
+        "Num":  69,
+        "Original":  "jun-06-069.jpg",
+        "File":  "jun-06-069.jpg",
+        "Taken":  "2026-06-06 21:45:49",
+        "Type":  "image"
+    },
+    {
+        "Num":  70,
+        "Original":  "jun-06-070.jpg",
+        "File":  "jun-06-070.jpg",
+        "Taken":  "2026-06-06 21:45:49",
+        "Type":  "image"
+    },
+    {
+        "Num":  71,
+        "Original":  "jun-06-071.jpg",
+        "File":  "jun-06-071.jpg",
+        "Taken":  "2026-06-06 21:48:16",
+        "Type":  "image"
+    },
+    {
+        "Num":  72,
+        "Original":  "jun-06-072.jpg",
+        "File":  "jun-06-072.jpg",
+        "Taken":  "2026-06-06 21:48:16",
+        "Type":  "image"
+    },
+    {
+        "Num":  73,
+        "Original":  "jun-06-073.jpg",
+        "File":  "jun-06-073.jpg",
+        "Taken":  "2026-06-06 21:51:59",
+        "Type":  "image"
+    },
+    {
+        "Num":  74,
+        "Original":  "jun-06-074.jpg",
+        "File":  "jun-06-074.jpg",
+        "Taken":  "2026-06-06 21:51:59",
+        "Type":  "image"
+    },
+    {
+        "Num":  75,
+        "Original":  "jun-06-075.jpg",
+        "File":  "jun-06-075.jpg",
+        "Taken":  "2026-06-06 21:52:16",
+        "Type":  "image"
+    },
+    {
+        "Num":  76,
+        "Original":  "jun-06-076.jpg",
+        "File":  "jun-06-076.jpg",
+        "Taken":  "2026-06-06 21:52:52",
+        "Type":  "image"
+    },
+    {
+        "Num":  77,
+        "Original":  "jun-06-077.jpg",
+        "File":  "jun-06-077.jpg",
+        "Taken":  "2026-06-06 21:52:53",
+        "Type":  "image"
+    },
+    {
+        "Num":  78,
+        "Original":  "jun-06-078.jpg",
+        "File":  "jun-06-078.jpg",
+        "Taken":  "2026-06-06 21:52:53",
+        "Type":  "image"
+    },
+    {
+        "Num":  79,
+        "Original":  "jun-06-079.jpg",
+        "File":  "jun-06-079.jpg",
+        "Taken":  "2026-06-06 21:53:06",
+        "Type":  "image"
+    },
+    {
+        "Num":  80,
+        "Original":  "jun-06-080.jpg",
+        "File":  "jun-06-080.jpg",
+        "Taken":  "2026-06-06 21:53:06",
+        "Type":  "image"
+    },
+    {
+        "Num":  81,
+        "Original":  "jun-06-081.jpg",
+        "File":  "jun-06-081.jpg",
+        "Taken":  "2026-06-06 21:54:39",
+        "Type":  "image"
+    },
+    {
+        "Num":  82,
+        "Original":  "jun-06-082.jpg",
+        "File":  "jun-06-082.jpg",
+        "Taken":  "2026-06-06 21:54:39",
+        "Type":  "image"
+    },
+    {
+        "Num":  83,
+        "Original":  "jun-06-083.jpg",
+        "File":  "jun-06-083.jpg",
+        "Taken":  "2026-06-06 21:56:12",
+        "Type":  "image"
+    },
+    {
+        "Num":  84,
+        "Original":  "jun-06-084.jpg",
+        "File":  "jun-06-084.jpg",
+        "Taken":  "2026-06-06 21:56:12",
+        "Type":  "image"
+    },
+    {
+        "Num":  85,
+        "Original":  "jun-06-085.jpg",
+        "File":  "jun-06-085.jpg",
+        "Taken":  "2026-06-06 21:56:16",
+        "Type":  "image"
+    },
+    {
+        "Num":  86,
+        "Original":  "jun-06-086.jpg",
+        "File":  "jun-06-086.jpg",
+        "Taken":  "2026-06-06 21:56:16",
+        "Type":  "image"
+    },
+    {
+        "Num":  87,
+        "Original":  "jun-06-087.jpg",
+        "File":  "jun-06-087.jpg",
+        "Taken":  "2026-06-06 22:03:48",
+        "Type":  "image"
+    },
+    {
+        "Num":  88,
+        "Original":  "jun-06-088.jpg",
+        "File":  "jun-06-088.jpg",
+        "Taken":  "2026-06-06 22:03:48",
+        "Type":  "image"
+    },
+    {
+        "Num":  89,
+        "Original":  "jun-06-089.jpg",
+        "File":  "jun-06-089.jpg",
+        "Taken":  "2026-06-06 22:14:38",
+        "Type":  "image"
+    },
+    {
+        "Num":  90,
+        "Original":  "jun-06-090.jpg",
+        "File":  "jun-06-090.jpg",
+        "Taken":  "2026-06-06 22:14:39",
+        "Type":  "image"
+    },
+    {
+        "Num":  91,
+        "Original":  "jun-06-091.jpg",
+        "File":  "jun-06-091.jpg",
+        "Taken":  "2026-06-06 22:14:40",
+        "Type":  "image"
+    },
+    {
+        "Num":  92,
+        "Original":  "jun-06-092.jpg",
+        "File":  "jun-06-092.jpg",
+        "Taken":  "2026-06-06 22:20:32",
+        "Type":  "image"
+    },
+    {
+        "Num":  93,
+        "Original":  "jun-06-093.jpg",
+        "File":  "jun-06-093.jpg",
+        "Taken":  "2026-06-06 22:20:32",
+        "Type":  "image"
+    },
+    {
+        "Num":  94,
+        "Original":  "jun-06-094.jpg",
+        "File":  "jun-06-094.jpg",
+        "Taken":  "2026-06-06 22:20:36",
+        "Type":  "image"
+    }
+]

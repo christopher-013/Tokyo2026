@@ -1,0 +1,10 @@
+# Large videos - do not upload to GitHub
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Optional large exports
+*.zip
+*.psd
+*.heic
