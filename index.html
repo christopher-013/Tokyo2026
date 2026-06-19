@@ -188,6 +188,7 @@ body{font-family:Aptos, 'Segoe UI', sans-serif;background:var(--bg);min-height:1
 .photo-location{font-size:12px!important;color:#0f766e;line-height:1.25;margin-bottom:4px}
 .photo-location a{color:#0f766e;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:2px}
 .photo-desc{font-size:11px!important;color:var(--ink3);line-height:1.3}
+.photo-captured{font-size:10px!important;color:var(--ink2);line-height:1.3;margin-top:5px;padding-top:5px;border-top:1px solid var(--border)}
 .photo-kind{display:inline-block;font-size:9px!important;color:#0f766e;background:#d8f3ef;border:1px solid rgba(15,118,110,0.2);border-radius:999px;padding:2px 5px;white-space:nowrap;margin-bottom:3px}
 .photo-empty{background:var(--bg3);border:1px dashed var(--border);border-radius:var(--r);padding:18px;color:var(--ink3);font-size:21px;line-height:1.35;text-align:center}
 .photo-lightbox{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(4,10,18,0.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
@@ -209,13 +210,14 @@ body{font-family:Aptos, 'Segoe UI', sans-serif;background:var(--bg);min-height:1
 .photo-lightbox-location{font-size:17px!important;line-height:1.3;color:#5eead4;margin-top:5px}
 .photo-lightbox-location a{color:#5eead4;text-decoration:underline;text-underline-offset:2px}
 .photo-lightbox-desc{font-size:17px!important;line-height:1.4;color:rgba(255,255,255,0.82);margin-top:5px}
+.photo-lightbox-captured{font-size:16px!important;line-height:1.35;color:rgba(255,255,255,0.65);margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.12)}
 body.photo-lightbox-open{overflow:hidden}
 @media (max-width:520px){
   .photo-lightbox{padding:8px}
   .photo-lightbox-dialog{height:94vh}
   .photo-lightbox-stage{padding:54px 48px 10px}
   .photo-lightbox-nav{width:42px;height:52px;margin-top:-26px;font-size:31px}
-  .photo-lightbox-title,.photo-lightbox-location,.photo-lightbox-desc{font-size:15px!important}
+  .photo-lightbox-title,.photo-lightbox-location,.photo-lightbox-desc,.photo-lightbox-captured{font-size:15px!important}
   .photo-lightbox-info{padding:11px 13px 13px}
 }
 
@@ -613,6 +615,7 @@ body{font-size:22px}
   </div>
 </div>
 
+<script src="capture-times.js"></script>
 <script>
 // ═══ DATA ═══
 const DAYS = [
@@ -1896,7 +1899,7 @@ function updatePhotoEmpty() {
   empty.style.display = visible ? 'none' : 'block';
 }
 
-function photoGalleryCard(src, title, kind, mediaType, caption) {
+function photoGalleryCard(src, title, kind, mediaType, caption, captured) {
   caption = caption || {};
   var lightboxIndex = -1;
   // Only gallery media with real caption metadata belongs in the navigable
@@ -1907,7 +1910,8 @@ function photoGalleryCard(src, title, kind, mediaType, caption) {
       title:title || kind || 'Trip photo',
       location:caption.location || '',
       desc:caption.desc || '',
-      mapsUrl:caption.mapsUrl || ''
+      mapsUrl:caption.mapsUrl || '',
+      captured:captured || ''
     }) - 1;
   }
   var media = mediaType === 'video'
@@ -1928,6 +1932,7 @@ function photoGalleryCard(src, title, kind, mediaType, caption) {
     + (title ? '<div class="photo-title">' + escapeAttr(title) + '</div>' : '')
     + locationHtml
     + (caption.desc ? '<div class="photo-desc">' + escapeAttr(caption.desc) + '</div>' : '')
+    + (captured ? '<div class="photo-captured">🕒 ' + escapeAttr(captured) + '</div>' : '')
     + '</div>'
     + '</div>';
 }
@@ -1942,6 +1947,7 @@ function renderPhotoLightboxItem() {
   var title = document.getElementById('photo-lightbox-title');
   var location = document.getElementById('photo-lightbox-location');
   var desc = document.getElementById('photo-lightbox-desc');
+  var captured = document.getElementById('photo-lightbox-captured');
   var count = document.getElementById('photo-lightbox-count');
   var previousButton = document.getElementById('photo-lightbox-prev');
   var nextButton = document.getElementById('photo-lightbox-next');
@@ -1973,6 +1979,10 @@ function renderPhotoLightboxItem() {
   if (desc) {
     desc.textContent = item.desc || '';
     desc.style.display = item.desc ? 'block' : 'none';
+  }
+  if (captured) {
+    captured.textContent = item.captured ? '🕒 ' + item.captured : '';
+    captured.style.display = item.captured ? 'block' : 'none';
   }
 }
 
@@ -2022,10 +2032,30 @@ document.addEventListener('keydown', function(event) {
   if (isOpen && event.key === 'ArrowRight') navigatePhotoLightbox(1);
 });
 
-function renderPhotos(num) {
+function formatGalleryCaptureTime(taken, dayNum, mediaNum) {
+  if (!taken) return '';
+  var match = String(taken).match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
+  if (!match) return taken;
+  var date = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]), Number(match[4]), Number(match[5]));
+  var zone = 'JST';
+  var gps = ITINERARY_GALLERY_GPS[dayNum] && ITINERARY_GALLERY_GPS[dayNum][mediaNum];
+  if (gps && gps[0] >= 21 && gps[0] < 22 && gps[1] <= -157 && gps[1] > -159) zone = 'HST';
+  return date.toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric',year:'numeric'})
+    + ' · ' + date.toLocaleTimeString('en-US', {hour:'numeric',minute:'2-digit'})
+    + ' ' + zone;
+}
+
+function galleryCaptureTimesForDay(dayNum) {
+  if (typeof GALLERY_CAPTURE_TIMES === 'undefined') return {};
+  return GALLERY_CAPTURE_TIMES[String(dayNum)] || {};
+}
+
+async function renderPhotos(num) {
   var d = DAYS.find(function(x){return x.num===num});
   var el = document.getElementById('photos-body');
   if(!d || !el) return;
+  var captureTimes = await galleryCaptureTimesForDay(num);
+  if (curDay !== num && document.getElementById('screen-photos').classList.contains('active')) return;
   PHOTO_LIGHTBOX_ITEMS = [];
   PHOTO_LIGHTBOX_INDEX = -1;
   var cards = [];
@@ -2035,7 +2065,7 @@ function renderPhotos(num) {
   });
   galleryMediaForDay(num).forEach(function(media, i) {
     var label = media.type === 'video' ? 'Video ' : 'Photo ';
-    cards.push(photoGalleryCard(media.src, '', label.trim(), media.type, galleryCaptionForDay(num, media.num, media.type)));
+    cards.push(photoGalleryCard(media.src, '', label.trim(), media.type, galleryCaptionForDay(num, media.num, media.type), captureTimes[media.num] || ''));
   });
   el.innerHTML = '<div class="sec-label">' + d.date + ' · Photos</div>'
     + '<div class="photo-grid" id="photos-grid">' + cards.join('') + '</div>'
@@ -4363,6 +4393,7 @@ function updateNotesDot(key) {
         </div>
         <div class="photo-lightbox-location" id="photo-lightbox-location"></div>
         <div class="photo-lightbox-desc" id="photo-lightbox-desc"></div>
+        <div class="photo-lightbox-captured" id="photo-lightbox-captured"></div>
       </div>
     </div>
   </div>
