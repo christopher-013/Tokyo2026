@@ -180,7 +180,44 @@ body{font-family:Aptos, 'Segoe UI', sans-serif;background:var(--bg);min-height:1
 .sc-photo{margin:0;border-radius:0;border-left:none;border-right:none;border-bottom:none;box-shadow:none;aspect-ratio:16/9}
 .sc-photo img{max-height:210px}
 .photo-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}
+.photo-day-map{position:relative;overflow:hidden;border:1px solid #bfd8d4;border-radius:15px;background:#dff5f2;box-shadow:0 5px 18px rgba(17,56,68,.12)}
+.photo-day-map-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:12px 13px 9px;background:linear-gradient(135deg,#fffdf4,#eefaf7);border-bottom:1px solid rgba(15,118,110,.15)}
+.photo-day-map-title{font-size:17px!important;font-weight:800;color:#164e63;line-height:1.2}
+.photo-day-map-sub{font-size:11px!important;color:#52727a;line-height:1.35;margin-top:3px}
+.photo-day-map-count{flex-shrink:0;background:#0f766e;color:#fff;border-radius:999px;padding:5px 9px;font-size:11px!important;font-weight:800;white-space:nowrap}
+.photo-day-map-canvas{position:relative;aspect-ratio:16/9;min-height:185px;background:#bfe8ef}
+.photo-day-map-canvas svg{display:block;width:100%;height:100%}
+.photo-google-map{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;background:#e5e7eb}
+.photo-map-overlay{position:absolute;inset:0;pointer-events:none}
+.photo-map-pin-html{position:absolute;z-index:2;display:flex;align-items:center;justify-content:center;width:46px;height:46px;padding:0 3px 7px;border:3px solid #fff;border-radius:50% 50% 50% 0;background:#e5484d;color:#fff;font-size:12px!important;line-height:1;font-weight:900;text-align:center;text-decoration:none;box-shadow:0 4px 10px rgba(15,23,42,.52);transform:translate(-50%,-100%) rotate(-45deg);transform-origin:50% 100%;pointer-events:auto;cursor:pointer}
+.photo-map-pin-html::before{content:'';position:absolute;inset:7px;border-radius:50%;background:rgba(126,20,25,.22);box-shadow:inset 0 0 0 1px rgba(255,255,255,.22)}
+.photo-map-pin-html::after{content:'';position:absolute;width:11px;height:5px;left:4px;top:6px;border-radius:50%;background:rgba(255,255,255,.35);transform:rotate(-12deg)}
+.photo-map-pin-count{position:relative;z-index:1;display:block;transform:rotate(45deg);text-shadow:0 1px 2px rgba(0,0,0,.4)}
+.photo-map-pin-html:hover,.photo-map-pin-html:focus{z-index:4;background:#0f766e;transform:translate(-50%,-100%) rotate(-45deg) scale(1.14);outline:none}
+.photo-map-open{position:absolute;right:8px;bottom:8px;z-index:3;padding:7px 10px;border-radius:7px;background:#fff;color:#1a73e8;border:1px solid #dadce0;box-shadow:0 1px 4px rgba(0,0,0,.28);font-size:10px!important;font-weight:700;text-decoration:none}
+.photo-map-open:hover{background:#f8fafd}
+.photo-filter-bar{display:none;align-items:center;justify-content:space-between;gap:10px;padding:9px 11px;border-radius:10px;background:#e8f6f3;border:1px solid #b9ddd5;color:#174f57;font-size:12px!important;font-weight:700}
+.photo-filter-bar.active{display:flex}
+.photo-filter-clear{flex-shrink:0;padding:6px 9px;border:0;border-radius:7px;background:#0f766e;color:#fff;font-size:11px!important;font-weight:800;cursor:pointer}
+.photo-filter-clear:active{transform:scale(.97)}
+.photo-map-land{fill:#f5eac7;stroke:#dfc98b;stroke-width:.8}
+.photo-map-park{fill:#b9dfa8;opacity:.9}
+.photo-map-road{fill:none;stroke:#fff8e6;stroke-width:1.25;stroke-linecap:round;opacity:.95}
+.photo-map-rail{fill:none;stroke:#ef8c72;stroke-width:.55;stroke-dasharray:1.5 1.3;opacity:.75}
+.photo-map-route{fill:none;stroke:#0f766e;stroke-width:1;stroke-dasharray:2.2 1.5;stroke-linecap:round;stroke-linejoin:round;opacity:.55}
+.photo-map-label{font:700 3.1px system-ui,sans-serif;fill:#48646b;paint-order:stroke;stroke:#fffdf4;stroke-width:1.1px;stroke-linejoin:round}
+.photo-map-water-label{font:italic 700 3.4px system-ui,sans-serif;fill:#4e91a1;letter-spacing:.25px}
+.photo-map-pin{filter:drop-shadow(0 1.3px 1px rgba(25,56,62,.3));cursor:pointer}
+.photo-map-pin circle{fill:#ef5d55;stroke:#fff;stroke-width:1}
+.photo-map-pin text{font:800 3.4px system-ui,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.photo-map-pin:hover circle{fill:#0f766e}
+.photo-day-map-legend{display:flex;gap:6px;overflow-x:auto;padding:9px 10px 10px;background:#fffdf8;scrollbar-width:thin}
+.photo-map-place{flex:0 0 auto;display:inline-flex;align-items:center;gap:5px;max-width:190px;padding:5px 8px;border-radius:999px;background:#edf8f5;border:1px solid #c9e8df;color:#205e65;font-size:10px!important;line-height:1.2;white-space:nowrap;text-decoration:none}
+.photo-map-place b{display:inline-flex;align-items:center;justify-content:center;min-width:18px;height:18px;padding:0 4px;border-radius:999px;background:#ef5d55;color:#fff;font-size:9px!important}
+.photo-map-place span{overflow:hidden;text-overflow:ellipsis}
+.photo-map-note{padding:0 11px 9px;background:#fffdf8;color:#71828a;font-size:10px!important;line-height:1.3}
 .photo-card{background:var(--bg3);border:1px solid var(--border);border-radius:8px;overflow:hidden;box-shadow:0 2px 8px rgba(17,24,39,0.08)}
+.photo-card.photo-map-filter-hidden{display:none!important}
 .photo-full-link{display:block;width:100%;padding:0;border:0;background:none;text-decoration:none;color:inherit;cursor:zoom-in}
 .photo-card img,.photo-card video{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--bg2)}
 .photo-meta{display:block;padding:6px 6px 7px}
@@ -213,6 +250,9 @@ body{font-family:Aptos, 'Segoe UI', sans-serif;background:var(--bg);min-height:1
 .photo-lightbox-captured{font-size:16px!important;line-height:1.35;color:rgba(255,255,255,0.65);margin-top:7px;padding-top:7px;border-top:1px solid rgba(255,255,255,0.12)}
 body.photo-lightbox-open{overflow:hidden}
 @media (max-width:520px){
+  .photo-day-map-canvas{aspect-ratio:4/3;min-height:210px}
+  .photo-day-map-title{font-size:15px!important}
+  .photo-day-map-sub,.photo-day-map-count{font-size:10px!important}
   .photo-lightbox{padding:8px}
   .photo-lightbox-dialog{height:94vh}
   .photo-lightbox-stage{padding:54px 48px 10px}
@@ -1894,12 +1934,12 @@ function updatePhotoEmpty() {
   var grid = document.getElementById('photos-grid');
   if (!empty || !grid) return;
   var visible = Array.prototype.some.call(grid.querySelectorAll('.photo-card'), function(card) {
-    return card.style.display !== 'none';
+    return window.getComputedStyle(card).display !== 'none';
   });
   empty.style.display = visible ? 'none' : 'block';
 }
 
-function photoGalleryCard(src, title, kind, mediaType, caption, captured) {
+function photoGalleryCard(src, title, kind, mediaType, caption, captured, mapLocation) {
   caption = caption || {};
   var lightboxIndex = -1;
   // Only gallery media with real caption metadata belongs in the navigable
@@ -1925,7 +1965,7 @@ function photoGalleryCard(src, title, kind, mediaType, caption, captured) {
   } else if (caption.location) {
     locationHtml = '<div class="photo-location">📍 ' + escapeAttr(caption.location) + '</div>';
   }
-  return '<div class="photo-card">'
+  return '<div class="photo-card"' + (mapLocation ? ' data-map-location="' + escapeAttr(mapLocation) + '"' : '') + '>'
     + media
     + '<div class="photo-meta">'
     + '<div class="photo-kind">' + escapeAttr(kind) + '</div>'
@@ -2050,6 +2090,226 @@ function galleryCaptureTimesForDay(dayNum) {
   return GALLERY_CAPTURE_TIMES[String(dayNum)] || {};
 }
 
+function photoMapForDay(dayNum) {
+  var media = galleryMediaForDay(dayNum);
+  var gpsForDay = ITINERARY_GALLERY_GPS[dayNum] || {};
+  var bounds = dayNum === 10
+    ? {minLat:35.08,maxLat:35.92,minLon:138.82,maxLon:140.10}
+    : {minLat:35.34,maxLat:35.92,minLon:139.32,maxLon:140.12};
+  function project(lat, lon) {
+    return {
+      x:4 + ((lon - bounds.minLon) / (bounds.maxLon - bounds.minLon)) * 92,
+      y:4 + ((bounds.maxLat - lat) / (bounds.maxLat - bounds.minLat)) * 62
+    };
+  }
+  var tagged = [];
+  var outside = 0;
+  media.forEach(function(item) {
+    var gps = gpsForDay[item.num];
+    if (!gps) return;
+    if (gps[0] < bounds.minLat || gps[0] > bounds.maxLat || gps[1] < bounds.minLon || gps[1] > bounds.maxLon) {
+      outside++;
+      return;
+    }
+    var point = project(gps[0], gps[1]);
+    tagged.push({num:item.num,type:item.type,gps:gps,x:point.x,y:point.y});
+  });
+  if (!tagged.length) {
+    return '<div class="photo-day-map"><div class="photo-day-map-head"><div><div class="photo-day-map-title">🗺️ Today’s photo trail</div><div class="photo-day-map-sub">No Tokyo-area geotags were found for this day.</div></div></div></div>';
+  }
+
+  var clusters = [];
+  tagged.forEach(function(point) {
+    var nearest = null;
+    clusters.forEach(function(cluster) {
+      var dx = point.x - cluster.x;
+      var dy = point.y - cluster.y;
+      var distance = Math.sqrt(dx * dx + dy * dy);
+      if (distance < 3.4 && (!nearest || distance < nearest.distance)) nearest = {cluster:cluster,distance:distance};
+    });
+    if (nearest) {
+      var c = nearest.cluster;
+      c.points.push(point);
+      c.x = c.points.reduce(function(sum,p){return sum+p.x},0) / c.points.length;
+      c.y = c.points.reduce(function(sum,p){return sum+p.y},0) / c.points.length;
+      c.lat = c.points.reduce(function(sum,p){return sum+p.gps[0]},0) / c.points.length;
+      c.lon = c.points.reduce(function(sum,p){return sum+p.gps[1]},0) / c.points.length;
+    } else {
+      clusters.push({x:point.x,y:point.y,lat:point.gps[0],lon:point.gps[1],points:[point]});
+    }
+  });
+  clusters.forEach(function(cluster) {
+    var first = cluster.points[0];
+    var caption = galleryCaptionForDay(dayNum, first.num, first.type) || {};
+    cluster.location = caption.location || 'Tokyo photo stop';
+  });
+  var verifiedAnchors = GALLERY_GEO_ANCHORS[dayNum] || [];
+  if (verifiedAnchors.length) {
+    var anchoredClusters = {};
+    tagged.forEach(function(point) {
+      var nearestAnchor = verifiedAnchors.reduce(function(best, anchor) {
+        var dy = (point.gps[0] - anchor.lat) * 111;
+        var dx = (point.gps[1] - anchor.lon) * 91;
+        var distance = Math.sqrt(dx * dx + dy * dy);
+        return !best || distance < best.distance ? {anchor:anchor,distance:distance} : best;
+      }, null).anchor;
+      if (!anchoredClusters[nearestAnchor.location]) {
+        anchoredClusters[nearestAnchor.location] = {
+          location:nearestAnchor.location,
+          lat:nearestAnchor.lat,
+          lon:nearestAnchor.lon,
+          points:[]
+        };
+      }
+      anchoredClusters[nearestAnchor.location].points.push(point);
+    });
+    clusters = Object.keys(anchoredClusters).map(function(key){return anchoredClusters[key]});
+  }
+  clusters.forEach(function(cluster) {
+    cluster.url = 'https://www.google.com/maps/search/?api=1&query=' + cluster.lat + ',' + cluster.lon;
+  });
+
+  var route = clusters.length > 1
+    ? '<polyline class="photo-map-route" points="' + clusters.map(function(c){var p=project(c.lat,c.lon);return p.x.toFixed(2)+','+p.y.toFixed(2)}).join(' ') + '"></polyline>'
+    : '';
+  var pins = clusters.map(function(c) {
+    var count = c.points.length;
+    var displayCount = count > 99 ? '99+' : String(count);
+    return '<button class="photo-map-pin-html" type="button" data-location="' + escapeAttr(c.location) + '" data-lat="' + c.lat.toFixed(7) + '" data-lon="' + c.lon.toFixed(7) + '" onclick="filterPhotosByMapLocation(this.dataset.location)" aria-label="' + escapeAttr('Show ' + count + ' photos from ' + c.location) + '" title="' + escapeAttr('Show ' + count + ' photos from ' + c.location) + '"><span class="photo-map-pin-count">' + displayCount + '</span></button>';
+  }).join('');
+  var legend = clusters.map(function(c) {
+    return '<a class="photo-map-place" href="' + escapeAttr(c.url) + '" target="_blank" rel="noopener"><b>' + c.points.length + '</b><span>' + escapeAttr(c.location) + '</span></a>';
+  }).join('');
+  var outsideNote = outside
+    ? '<div class="photo-map-note">✈️ ' + outside + ' geotagged photo' + (outside === 1 ? '' : 's') + ' outside the Tokyo map ' + (dayNum === 14 ? '(including Honolulu) ' : '') + 'are not plotted here.</div>'
+    : '';
+  function mercatorY(lat) {
+    var siny = Math.sin(lat * Math.PI / 180);
+    siny = Math.min(Math.max(siny, -0.9999), 0.9999);
+    return 0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI);
+  }
+  function latitudeFromMercator(y) {
+    return Math.atan(Math.sinh(Math.PI * (1 - 2 * y))) * 180 / Math.PI;
+  }
+  var minPinLat = Math.min.apply(null, clusters.map(function(c){return c.lat}));
+  var maxPinLat = Math.max.apply(null, clusters.map(function(c){return c.lat}));
+  var minPinLon = Math.min.apply(null, clusters.map(function(c){return c.lon}));
+  var maxPinLon = Math.max.apply(null, clusters.map(function(c){return c.lon}));
+  var minPinY = mercatorY(maxPinLat);
+  var maxPinY = mercatorY(minPinLat);
+  var mapCenter = [
+    latitudeFromMercator((minPinY + maxPinY) / 2),
+    (minPinLon + maxPinLon) / 2
+  ];
+  var mapZoom = 15;
+  while (mapZoom > 8) {
+    var worldSizeAtZoom = 256 * Math.pow(2, mapZoom);
+    var pinWidth = ((maxPinLon - minPinLon) / 360) * worldSizeAtZoom;
+    var pinHeight = (maxPinY - minPinY) * worldSizeAtZoom;
+    if (pinWidth <= 430 && pinHeight <= 315) break;
+    mapZoom--;
+  }
+  mapCenter[0] = Number(mapCenter[0].toFixed(6));
+  mapCenter[1] = Number(mapCenter[1].toFixed(6));
+  var googleEmbedUrl = 'https://maps.google.com/maps?ll=' + mapCenter[0] + ',' + mapCenter[1] + '&z=' + mapZoom + '&t=m&hl=en&output=embed';
+  var googleOpenUrl = 'https://www.google.com/maps/@' + mapCenter[0] + ',' + mapCenter[1] + ',' + mapZoom + 'z';
+
+  return '<div class="photo-day-map" data-day="' + dayNum + '">'
+    + '<div class="photo-day-map-head"><div><div class="photo-day-map-title">🗺️ Today’s photo trail</div><div class="photo-day-map-sub">Detailed Google Maps view with photo locations plotted from the original geotags.</div></div><div class="photo-day-map-count">' + tagged.length + ' tagged</div></div>'
+    + '<div class="photo-day-map-canvas" data-map-lat="' + mapCenter[0] + '" data-map-lon="' + mapCenter[1] + '" data-map-zoom="' + mapZoom + '" data-map-base-zoom="' + mapZoom + '"><iframe class="photo-google-map" title="Google Map of the day’s photo locations" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="' + escapeAttr(googleEmbedUrl) + '"></iframe>'
+    + '<div class="photo-map-overlay">' + pins + '</div><a class="photo-map-open" href="' + escapeAttr(googleOpenUrl) + '" target="_blank" rel="noopener">View interactive map ↗</a></div>'
+    + '<div class="photo-day-map-legend">' + legend + '</div>' + outsideNote + '</div>';
+}
+
+function positionPhotoMapPins() {
+  var canvas = document.querySelector('.photo-day-map-canvas');
+  if (!canvas) return;
+  var width = canvas.clientWidth;
+  var height = canvas.clientHeight;
+  var centerLat = Number(canvas.getAttribute('data-map-lat'));
+  var centerLon = Number(canvas.getAttribute('data-map-lon'));
+  var zoom = Number(canvas.getAttribute('data-map-base-zoom') || canvas.getAttribute('data-map-zoom'));
+  if (!width || !height || !isFinite(centerLat) || !isFinite(centerLon) || !isFinite(zoom)) return;
+  var pinElements = Array.prototype.slice.call(canvas.querySelectorAll('.photo-map-pin-html'));
+  function worldPoint(lat, lon, size) {
+    var siny = Math.sin(lat * Math.PI / 180);
+    siny = Math.min(Math.max(siny, -0.9999), 0.9999);
+    return {
+      x:(lon + 180) / 360 * size,
+      y:(0.5 - Math.log((1 + siny) / (1 - siny)) / (4 * Math.PI)) * size
+    };
+  }
+  while (zoom > 8) {
+    var testSize = 256 * Math.pow(2, zoom);
+    var testCenter = worldPoint(centerLat, centerLon, testSize);
+    var fits = pinElements.every(function(pin) {
+      var point = worldPoint(Number(pin.getAttribute('data-lat')), Number(pin.getAttribute('data-lon')), testSize);
+      var left = width / 2 + point.x - testCenter.x;
+      var top = height / 2 + point.y - testCenter.y;
+      return left >= 28 && left <= width - 28 && top >= 54 && top <= height - 14;
+    });
+    if (fits) break;
+    zoom--;
+  }
+  var worldSize = 256 * Math.pow(2, zoom);
+  var center = worldPoint(centerLat, centerLon, worldSize);
+  if (Number(canvas.getAttribute('data-map-zoom')) !== zoom) {
+    canvas.setAttribute('data-map-zoom', zoom);
+    var iframe = canvas.querySelector('.photo-google-map');
+    if (iframe) iframe.src = iframe.src.replace(/([?&]z=)\d+/, '$1' + zoom);
+  }
+  pinElements.forEach(function(pin) {
+    var point = worldPoint(Number(pin.getAttribute('data-lat')), Number(pin.getAttribute('data-lon')), worldSize);
+    var left = width / 2 + point.x - center.x;
+    var top = height / 2 + point.y - center.y;
+    pin.style.left = left.toFixed(1) + 'px';
+    pin.style.top = top.toFixed(1) + 'px';
+    pin.style.display = left < 25 || left > width - 25 || top < 50 || top > height - 10 ? 'none' : 'flex';
+  });
+}
+
+window.addEventListener('resize', positionPhotoMapPins);
+
+function galleryMapLocationForPhoto(dayNum, mediaNum) {
+  var gps = ITINERARY_GALLERY_GPS[dayNum] && ITINERARY_GALLERY_GPS[dayNum][mediaNum];
+  var anchors = GALLERY_GEO_ANCHORS[dayNum] || [];
+  if (!gps || !anchors.length) return '';
+  return anchors.reduce(function(best, anchor) {
+    var dy = (gps[0] - anchor.lat) * 111;
+    var dx = (gps[1] - anchor.lon) * 91;
+    var distance = Math.sqrt(dx * dx + dy * dy);
+    return !best || distance < best.distance ? {location:anchor.location,distance:distance} : best;
+  }, null).location;
+}
+
+function filterPhotosByMapLocation(location) {
+  var grid = document.getElementById('photos-grid');
+  var bar = document.getElementById('photo-filter-bar');
+  var label = document.getElementById('photo-filter-label');
+  if (!grid || !bar || !label) return;
+  var shown = 0;
+  Array.prototype.forEach.call(grid.querySelectorAll('.photo-card'), function(card) {
+    var matches = card.getAttribute('data-map-location') === location;
+    card.classList.toggle('photo-map-filter-hidden', !matches);
+    if (matches && card.style.display !== 'none') shown++;
+  });
+  label.textContent = '📍 ' + location + ' · ' + shown + ' photo' + (shown === 1 ? '' : 's');
+  bar.classList.add('active');
+  bar.scrollIntoView({behavior:'smooth',block:'start'});
+  updatePhotoEmpty();
+}
+
+function clearPhotoMapFilter() {
+  var grid = document.getElementById('photos-grid');
+  var bar = document.getElementById('photo-filter-bar');
+  if (!grid || !bar) return;
+  Array.prototype.forEach.call(grid.querySelectorAll('.photo-card'), function(card) {
+    card.classList.remove('photo-map-filter-hidden');
+  });
+  bar.classList.remove('active');
+  updatePhotoEmpty();
+}
+
 async function renderPhotos(num) {
   var d = DAYS.find(function(x){return x.num===num});
   var el = document.getElementById('photos-body');
@@ -2065,12 +2325,16 @@ async function renderPhotos(num) {
   });
   galleryMediaForDay(num).forEach(function(media, i) {
     var label = media.type === 'video' ? 'Video ' : 'Photo ';
-    cards.push(photoGalleryCard(media.src, '', label.trim(), media.type, galleryCaptionForDay(num, media.num, media.type), captureTimes[media.num] || ''));
+    cards.push(photoGalleryCard(media.src, '', label.trim(), media.type, galleryCaptionForDay(num, media.num, media.type), captureTimes[media.num] || '', galleryMapLocationForPhoto(num, media.num)));
   });
   el.innerHTML = '<div class="sec-label">' + d.date + ' · Photos</div>'
+    + photoMapForDay(num)
+    + '<div class="photo-filter-bar" id="photo-filter-bar"><span id="photo-filter-label"></span><button class="photo-filter-clear" type="button" onclick="clearPhotoMapFilter()">Show all photos</button></div>'
     + '<div class="photo-grid" id="photos-grid">' + cards.join('') + '</div>'
     + '<div class="photo-empty" id="photos-empty" style="display:none">No photos added yet for ' + d.date + '. Add images to the matching files in assets/itinerary or assets/stops.</div>'
     + '<div style="height:20px"></div>';
+  positionPhotoMapPins();
+  setTimeout(positionPhotoMapPins, 250);
   setTimeout(updatePhotoEmpty, 120);
 }
 
