@@ -231,7 +231,7 @@ body{font-family:Aptos, 'Segoe UI', sans-serif;background:var(--bg);min-height:1
 .photo-lightbox{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:18px;background:rgba(4,10,18,0.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
 .photo-lightbox.open{display:flex}
 .photo-lightbox-dialog{position:relative;width:min(100%,1000px);height:min(92vh,1000px);display:grid;grid-template-rows:minmax(0,1fr) auto;background:#090d12;border-radius:12px;overflow:hidden;box-shadow:0 18px 60px rgba(0,0,0,0.55)}
-.photo-lightbox-stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;padding:58px 62px 16px}
+.photo-lightbox-stage{position:relative;min-height:0;display:flex;align-items:center;justify-content:center;padding:58px 62px 16px;touch-action:pan-y}
 .photo-lightbox-media{display:block;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:8px;background:#090d12}
 .photo-lightbox-close{position:absolute;top:8px;right:8px;z-index:2;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,0.4);background:rgba(0,0,0,0.72);color:#fff;font-size:28px;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,0.35)}
 .photo-lightbox-close:active{transform:scale(0.94);background:rgba(15,118,110,0.9)}
@@ -2062,6 +2062,43 @@ function closePhotoLightbox() {
 
 function handlePhotoLightboxClick(event) {
   if (event.target && event.target.id === 'photo-lightbox') closePhotoLightbox();
+}
+
+function handlePhotoLightboxTouchStart(event) {
+  var lightbox = document.getElementById('photo-lightbox');
+  if (!lightbox || !lightbox.classList.contains('open') || !event.changedTouches || !event.changedTouches.length) return;
+  var touch = event.changedTouches[0];
+  PHOTO_LIGHTBOX_TOUCH_START_X = touch.clientX;
+  PHOTO_LIGHTBOX_TOUCH_START_Y = touch.clientY;
+  PHOTO_LIGHTBOX_TOUCH_ACTIVE = true;
+}
+
+function handlePhotoLightboxTouchEnd(event) {
+  if (!PHOTO_LIGHTBOX_TOUCH_ACTIVE || !event.changedTouches || !event.changedTouches.length) return;
+  PHOTO_LIGHTBOX_TOUCH_ACTIVE = false;
+  var touch = event.changedTouches[0];
+  var deltaX = touch.clientX - PHOTO_LIGHTBOX_TOUCH_START_X;
+  var deltaY = touch.clientY - PHOTO_LIGHTBOX_TOUCH_START_Y;
+  var absX = Math.abs(deltaX);
+  var absY = Math.abs(deltaY);
+  if (absX < 45 || absX < absY * 1.25) return;
+  if (deltaX > 0) navigatePhotoLightbox(-1);
+  else navigatePhotoLightbox(1);
+}
+
+function initPhotoLightboxSwipe() {
+  var stage = document.querySelector('.photo-lightbox-stage');
+  if (!stage || stage.dataset.swipeReady === '1') return;
+  stage.dataset.swipeReady = '1';
+  stage.addEventListener('touchstart', handlePhotoLightboxTouchStart, {passive:true});
+  stage.addEventListener('touchend', handlePhotoLightboxTouchEnd, {passive:true});
+  stage.addEventListener('touchcancel', function(){ PHOTO_LIGHTBOX_TOUCH_ACTIVE = false; }, {passive:true});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initPhotoLightboxSwipe);
+} else {
+  initPhotoLightboxSwipe();
 }
 
 document.addEventListener('keydown', function(event) {
